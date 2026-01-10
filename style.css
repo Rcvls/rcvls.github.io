@@ -240,45 +240,65 @@ div.text-wrapper {
     color: #222222;
     display: inline-block;
 }
-div.equality {
-    background-color: #f44336;
+div.aggression {
+    background-color: #ff0000ff;
     text-align: left;
     border-right-style: solid;
 }
-div.wealth {
-    background-color: #00897b;
+div.courtesy {
+    background-color: #0098ffff;
     text-align: right;
     border-left-style: solid;
 }
-div.liberty {
-    background-color: #ffeb3b;
+div.speciation {
+    background-color: #d4aa00ff;
     text-align: left;
     border-right-style: solid;
 }
-div.authority {
-    background-color: #3f51b5;
+div.uniformity {
+    background-color: #6f4f85ff;
     text-align: right;
     border-left-style: solid;
 }
-div.peace {
-    background-color: #03a9f4;
-    text-align: right;
-    border-left-style: solid;
-}
-div.might {
-    background-color: #ff9800;
+div.integration {
+    background-color: #8a5a32ff;
     text-align: left;
     border-right-style: solid;
 }
-div.progress {
-    background-color: #9c27b0;
+div.segregation {
+    background-color: #288c2aff;
     text-align: right;
     border-left-style: solid;
 }
-div.tradition {
-    background-color: #8bc34a;
+div.diversity {
+    background-color: #bf72baff;
     text-align: left;
     border-right-style: solid;
+}
+div.supremacy {
+    background-color: #ff8809ff;
+    text-align: right;
+    border-left-style: solid;
+}
+div.totalitarian {
+    background-color: #9a100aff;
+    text-align: left;
+    border-right-style: solid;
+}
+div.libertarian {
+    background-color: #ffef4bff;
+    text-align: right;
+    border-left-style: solid;
+}
+div.particular {
+    background-color: #ff792bff;
+    text-align: left;
+    border-right-style: solid;
+}
+div.universal {
+    background-color: #3bf029ff;
+    text-align: right;
+    border-left-style: solid;
 }
 span.weight-300 {
     font-weight: 300;
