@@ -25,19 +25,23 @@
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    let econ_array = new Array(questions.length);
-    let dipl_array = new Array(questions.length);
-    let govt_array = new Array(questions.length);
-    let scty_array = new Array(questions.length);
+    var max_bigt, max_diff, max_asim, max_plur, max_plzn, max_part; // Max possible scores
+    max_bigt = max_diff = max_asim = max_plur = max_plzn = max_part = 0;
+    let bigt_array = new Array(questions.length);
+    let diff_array = new Array(questions.length);
+    let asim_array = new Array(questions.length);
+    let plur_array = new Array(questions.length);
+    let plzn_array = new Array(questions.length);
+    let part_array = new Array(questions.length);
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
+        max_bigt += Math.abs(questions[i].effect.bigt)
+        max_diff += Math.abs(questions[i].effect.diff)
+        max_asim += Math.abs(questions[i].effect.asim)
+        max_plur += Math.abs(questions[i].effect.plur)
+        max_plzn += Math.abs(questions[i].effect.plzn)
+        max_part += Math.abs(questions[i].effect.part)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -53,10 +57,12 @@
     }
 
     function next_question(mult) {
-        econ_array[qn] = mult*questions[qn].effect.econ
-        dipl_array[qn] = mult*questions[qn].effect.dipl
-        govt_array[qn] = mult*questions[qn].effect.govt
-        scty_array[qn] = mult*questions[qn].effect.scty
+        bigt_array[qn] = mult*questions[qn].effect.econ
+        diff_array[qn] = mult*questions[qn].effect.dipl
+        asim_array[qn] = mult*questions[qn].effect.govt
+        plur_array[qn] = mult*questions[qn].effect.scty
+        plzn_array[qn] = mult*questions[qn].effect.plzn
+        part_array[qn] = mult*questions[qn].effect.part
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -78,15 +84,19 @@
     }
 
     function results() {
-        let final_econ = econ_array.reduce((a, b) => a + b, 0)
-        let final_dipl = dipl_array.reduce((a, b) => a + b, 0)
-        let final_govt = govt_array.reduce((a, b) => a + b, 0)
-        let final_scty = scty_array.reduce((a, b) => a + b, 0)
+        let final_bigt = bigt_array.reduce((a, b) => a + b, 0)
+        let final_diff = diff_array.reduce((a, b) => a + b, 0)
+        let final_asim = asim_array.reduce((a, b) => a + b, 0)
+        let final_plur = plur_array.reduce((a, b) => a + b, 0)
+        let final_plzn = plzn_array.reduce((a, b) => a + b, 0)
+        let final_part = part_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
-            + `?e=${calc_score(final_econ,max_econ)}`
-            + `&d=${calc_score(final_dipl,max_dipl)}`
-            + `&g=${calc_score(final_govt,max_govt)}`
-            + `&s=${calc_score(final_scty,max_scty)}`
+            + `?bi=${calc_score(final_bigt,max_bigt)}`
+            + `&di=${calc_score(final_diff,max_diff)}`
+            + `&as=${calc_score(final_asim,max_asim)}`
+            + `&pl=${calc_score(final_plur,max_plur)}`
+            + `&po=${calc_score(final_plzn,max_plzn)}`
+            + `&pa=${calc_score(final_part,max_part)}`
     }
 </script>
 </body>
