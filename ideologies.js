@@ -152,5 +152,16 @@ ideologies = [
             "plzn": 50,
             "part": 30
         }
+    },
+    {
+        "name": "Ethnic Native Faith",
+        "stats": {
+            "bigt": 20,
+            "diff": 50,
+            "asim": 10,
+            "plur": 50,
+            "plzn": 10,
+            "part": 90
+        }
     }
 ];
