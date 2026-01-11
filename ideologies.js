@@ -134,11 +134,11 @@ ideologies = [
     {
         "name": "Right-Wing Populist",
         "stats": {
-            "bigt": 60,
+            "bigt": 30,
             "diff": 60,
-            "asim": 60,
+            "asim": 50,
             "plur": 40,
-            "plzn": 50,
+            "plzn": 55,
             "part": 30
         }
     },
