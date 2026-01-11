@@ -50,19 +50,8 @@ ideologies = [
             "diff": 70,
             "asim": 10,
             "plur": 70,
-            "plzn": 60,
+            "plzn": 80,
             "part": 40
-        }
-    },
-    {
-        "name": "Segregationist",
-        "stats": {
-            "bigt": 25,
-            "diff": 70,
-            "asim": 20,
-            "plur": 50,
-            "plzn": 70,
-            "part": 50
         }
     },
     {
